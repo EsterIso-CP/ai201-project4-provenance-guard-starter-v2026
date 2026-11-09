@@ -47,83 +47,59 @@ def words(text: str) -> list[str]:
 
 # ── The three measures — YOU BUILD THESE ─────────────────────────────────────
 
+TTR_WINDOW = 100  # only look at the first 100 words, so length can't fake a signal
+
+
 def sentence_length_spread(text: str) -> float:
     """
-    How much sentence length varies. ← TODO
-
-    Returns:
-        A float. Decide yourself what scale it's on and which direction means
-        "more human" — then write that down, because your combining rule
-        depends on knowing it.
-
-    A hint on what you're reaching for: the standard deviation of sentence
-    lengths, probably divided by the mean so a long text and a short one are
-    comparable. `statistics.stdev` is imported for you.
-
-    Watch the edge case: a one-sentence submission has no spread at all, and
-    `stdev` raises on fewer than two values. Decide what that should return
-    before the attack set decides for you.
+    Coefficient of variation of sentence length (stdev / mean, in words).
+    Scale: 0 upward; typical 0.2 (even) to 0.8 (lumpy). HIGHER = MORE HUMAN.
+    Fewer than two sentences has no spread, so it returns NaN, and
+    style_signal treats that as neutral (0.5) instead of accusing anyone.
     """
-    # TODO: replace this
-    return 0.0
+    lengths = [len(words(s)) for s in sentences(text)]
+    lengths = [n for n in lengths if n > 0]
+    if len(lengths) < 2:
+        return float("nan")
+    return statistics.stdev(lengths) / statistics.mean(lengths)
 
 
 def type_token_ratio(text: str) -> float:
     """
-    Unique words over total words. ← TODO
-
-    Returns:
-        A float between 0 and 1. Higher means more varied vocabulary.
-
-    Worth knowing before you rely on it: this measure falls as text gets
-    longer, because common words repeat. Two texts of different lengths aren't
-    directly comparable on it, and if your test inputs vary a lot in length,
-    that alone can look like a signal.
+    Unique words / total words, over the first TTR_WINDOW words only.
+    Scale: 0 to 1. HIGHER = MORE VARIED = MORE HUMAN.
     """
-    # TODO: replace this
-    return 0.0
+    w = words(text)[:TTR_WINDOW]
+    return len(set(w)) / len(w) if w else 0.0
 
+
+_PUNCT = re.compile(r"[,;:()\u2014\u2013\"?!-]")
 
 def punctuation_density(text: str) -> float:
     """
-    How much punctuation, relative to length. ← TODO
-
-    Returns:
-        A float. Whether you count all punctuation or only some kinds — commas,
-        semicolons, dashes — is a real choice. Semicolons and em dashes are
-        more interesting than full stops, because they vary more between
-        writers.
+    Non-period punctuation marks per word (commas, semicolons, colons, dashes,
+    parentheses, quotes, ? and !). Scale: 0 upward. Direction is a GUESS:
+    here HIGHER = MORE AI-ISH, which is the weakest assumption of the three.
     """
-    # TODO: replace this
-    return 0.0
+    w = words(text)
+    return len(_PUNCT.findall(text)) / len(w) if w else 0.0
+
+
+def _clamp(x: float) -> float:
+    return min(max(x, 0.0), 1.0)
+
 
 
 # ── Combining them ───────────────────────────────────────────────────────────
 
 def style_signal(text: str) -> float:
-    """
-    The style signal as a 0–1 score. **Higher means more likely AI.** ← TODO
-
-    Combine your three measures into one number. Same direction as
-    `detector.model_signal`, so that `scoring.combine_signals` can treat them
-    the same way — if one of your signals runs backwards, everything above it
-    is wrong in a way that's hard to see.
-
-    Two things to decide and write down:
-
-      1. Which direction each measure points. Low spread means more AI-ish, so
-         it needs flipping. Work out which of your three need that.
-      2. How to get each onto a comparable scale. A raw type-token ratio sits
-         between 0 and 1; a raw punctuation count doesn't. Adding them
-         unscaled means whichever has the bigger numbers wins by default.
-
-    Test it on the four calibration inputs from Milestone 4 — clearly AI,
-    clearly human, plain conventional human writing, lightly-edited AI — before
-    you trust it. Plain and ordinary, not formal: formal prose reads as *human*
-    to signal one, and it is plain writing that gets accused.
-    """
-    # TODO: replace this
-    return 0.5
+    """0-1, HIGHER = MORE LIKELY AI. Each measure becomes an AI-ness sub-score
+    on 0-1 first, so none wins just because its raw numbers are bigger."""
+    cv = sentence_length_spread(text)
+    spread_ai = 0.5 if cv != cv else _clamp(1.0 - cv / 0.8)         # flipped
+    ttr_ai = _clamp(1.0 - (type_token_ratio(text) - 0.55) / 0.40)   # flipped
+    punct_ai = _clamp(punctuation_density(text) / 0.15)             # not flipped
+    return round(0.5 * spread_ai + 0.3 * ttr_ai + 0.2 * punct_ai, 4)
 
 
 if __name__ == "__main__":

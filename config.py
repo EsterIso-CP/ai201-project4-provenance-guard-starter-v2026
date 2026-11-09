@@ -57,6 +57,9 @@ DETECTOR_MAX_TOKENS = 400
 WEIGHT_MODEL_SIGNAL = 0.5
 WEIGHT_STYLE_SIGNAL = 0.5
 
+# Both signals must be at least this high before a score above AI_THRESHOLD
+# counts as high-confidence AI. Below it, the score is capped into "unsure".
+AGREEMENT_FLOOR = 0.5
 
 # ─── Thresholds (Milestone 5) ────────────────────────────────────────────────
 # Where one label becomes another. Scores run 0.0 (confidently human) to 1.0
