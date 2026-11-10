@@ -77,6 +77,11 @@ AGREEMENT_FLOOR = 0.5
 HUMAN_THRESHOLD = 0.35
 AI_THRESHOLD = 0.65
 
+# UNIT 8 improvement: the fewest words (as stylometry.words counts them —
+# [a-z0-9'] runs) a submission needs before it is scored at all. Below this,
+# type-token ratio is pinned at 1.0 or 0.0 and gpt2 has too little context.
+MIN_WORDS = 12
+
 # ⚠️ One thing that catches people out in Milestone 5. A weighted average can
 # only land between its two inputs — so while `style_signal` is still the stub
 # returning 0.5, the combined score can never leave 0.25–0.75 no matter what
@@ -95,10 +100,14 @@ AI_THRESHOLD = 0.65
 # an hour, and a script sending a thousand variations to map your thresholds.
 # Your README has to say why your numbers and not others.
 
-RATE_LIMITING_ENABLED = os.getenv("AI201_RATE_LIMITS", "0") == "1"
+RATE_LIMITING_ENABLED = os.getenv("AI201_RATE_LIMITS", "1") == "1"
 
-RATE_LIMIT_PER_MINUTE = 10
-RATE_LIMIT_PER_DAY = 200
+# A real writer submits a piece, maybe edits and resubmits: a handful an hour.
+# 5/minute leaves room for a quick retry; 50/day is far more than one person's
+# own writing. A script mapping thresholds needs hundreds of probes, so at
+# 50/day per creator_id it takes weeks, not minutes.
+RATE_LIMIT_PER_MINUTE = 5
+RATE_LIMIT_PER_DAY = 50
 
 # Flask-Limiter warns loudly without this. In-memory is right for one laptop
 # and wrong for anything real — a restart forgets every count, and two copies

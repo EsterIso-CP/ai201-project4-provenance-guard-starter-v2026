@@ -154,34 +154,64 @@ def health():
 
 # ── YOU BUILD THIS ────────────────────────────────────────────────────────────
 
+def _reject(route, creator_id, error, message, http_status, **extra):
+    """
+    Refuse a request AND leave a trace in the audit log. An attack that only
+    shows up as an absence is one you'll never find.
+    """
+    audit.log_rejection(
+        creator_id=creator_id if isinstance(creator_id, str) and creator_id.strip() else "unknown",
+        reason=error,
+        route=route,
+        http_status=http_status,
+        **extra,
+    )
+    return jsonify({"error": error, "message": message}), http_status
+
+
 @app.post("/submit")
-# @limiter.limit(f"{config.RATE_LIMIT_PER_MINUTE}/minute;{config.RATE_LIMIT_PER_DAY}/day")
+@limiter.limit(f"{config.RATE_LIMIT_PER_MINUTE}/minute;{config.RATE_LIMIT_PER_DAY}/day")
 def submit():
     import detector
 
     payload = request.get_json(silent=True)
     if not isinstance(payload, dict):
-        return jsonify({"error": "bad_request",
-                        "message": "Send a JSON object with text and creator_id."}), 400
+        return _reject("/submit", None, "bad_request",
+                       "Send a JSON object with text and creator_id.", 400)
 
     text = payload.get("text")
     creator_id = payload.get("creator_id")
 
     if not isinstance(text, str) or not text.strip():
-        return jsonify({"error": "text_missing",
-                        "message": "text must be a non-empty string."}), 400
+        return _reject("/submit", creator_id, "text_missing",
+                       "text must be a non-empty string.", 400,
+                       text_type=type(text).__name__)
     if len(text) > 20000:
-        return jsonify({"error": "text_too_long",
-                        "message": "text must be 20,000 characters or fewer."}), 413
+        return _reject("/submit", creator_id, "text_too_long",
+                       "text must be 20,000 characters or fewer.", 413,
+                       text_length=len(text))
+    # UNIT 8 improvement: refuse text the signals can't measure. With no
+    # words (emoji, non-Latin script, punctuation) type-token ratio is 0.0 and
+    # reads as maximally AI; with a handful, it is 1.0 and reads as maximally
+    # human. Either way the score is a confident number about nothing.
+    word_count = len(stylometry.words(text))
+    if word_count < config.MIN_WORDS:
+        return _reject("/submit", creator_id, "too_few_words",
+                       f"We need at least {config.MIN_WORDS} words written in the "
+                       f"English alphabet to make a guess, and this has {word_count}. "
+                       f"That isn't a judgment about your writing: below that, our "
+                       f"checks have nothing reliable to measure, so we don't score it.",
+                       422, word_count=word_count)
     if not isinstance(creator_id, str) or not creator_id.strip():
         creator_id = "unknown"
 
     try:
         model_score = detector.model_signal(text)
     except ValueError as exc:  # too short to score
-        return jsonify({"error": "text_too_short", "message": str(exc)}), 400
+        return _reject("/submit", creator_id, "text_too_short", str(exc), 400,
+                       text_length=len(text))
     except detector.DetectorUnavailable as exc:
-        return jsonify({"error": "detector_unavailable", "message": str(exc)}), 503
+        return _reject("/submit", creator_id, "detector_unavailable", str(exc), 503)
 
     style_score = stylometry.style_signal(text)
     combined = scoring.combine_signals(model_score, style_score)
@@ -213,27 +243,30 @@ def submit():
 def appeal():
     payload = request.get_json(silent=True)
     if not isinstance(payload, dict):
-        return jsonify({"error": "bad_request",
-                        "message": "Send a JSON object with content_id and reasoning."}), 400
+        return _reject("/appeal", None, "bad_request",
+                       "Send a JSON object with content_id and reasoning.", 400)
 
     content_id = payload.get("content_id")
     reasoning = payload.get("reasoning")
 
     if not isinstance(content_id, str) or not content_id.strip():
-        return jsonify({"error": "content_id_missing",
-                        "message": "content_id must be a non-empty string."}), 400
+        return _reject("/appeal", None, "content_id_missing",
+                       "content_id must be a non-empty string.", 400)
     if not isinstance(reasoning, str) or not reasoning.strip():
-        return jsonify({"error": "reasoning_missing",
-                        "message": "Tell us why you think this result is wrong."}), 400
+        return _reject("/appeal", None, "reasoning_missing",
+                       "Tell us why you think this result is wrong.", 400,
+                       content_id=content_id)
     if len(reasoning) > 2000:
-        return jsonify({"error": "reasoning_too_long",
-                        "message": "reasoning must be 2,000 characters or fewer."}), 413
+        return _reject("/appeal", None, "reasoning_too_long",
+                       "reasoning must be 2,000 characters or fewer.", 413,
+                       content_id=content_id)
 
     content_id = content_id.strip()
     original = audit.entries_for(content_id)
     if not original:
-        return jsonify({"error": "unknown_content_id",
-                        "message": "No submission with that content_id."}), 404
+        return _reject("/appeal", None, "unknown_content_id",
+                       "No submission with that content_id.", 404,
+                       content_id=content_id)
 
     # The appeal belongs to whoever made the original submission.
     creator_id = original[0].get("creator_id", "unknown")

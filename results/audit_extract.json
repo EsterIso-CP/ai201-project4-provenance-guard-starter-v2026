@@ -1,0 +1,890 @@
+{
+  "count": 88,
+  "entries": [
+    {
+      "combined_score": null,
+      "content_id": "fad08308-72fa-4b65-a236-9a2a945d5719",
+      "creator_id": "ester",
+      "guess": "placeholder",
+      "label": null,
+      "model_score": 0.8864,
+      "status": "submitted",
+      "style_score": null,
+      "timestamp": "2026-11-09T06:05:33+00:00"
+    },
+    {
+      "combined_score": null,
+      "content_id": "389bf76f-0d4d-467a-9c8b-5465a0001b87",
+      "creator_id": "ester",
+      "guess": "placeholder",
+      "label": null,
+      "model_score": 0.5448,
+      "status": "submitted",
+      "style_score": null,
+      "timestamp": "2026-11-09T06:05:40+00:00"
+    },
+    {
+      "combined_score": null,
+      "content_id": "85a4bae9-1063-4e8a-acd3-8f640809d60d",
+      "creator_id": "ester",
+      "guess": "placeholder",
+      "label": null,
+      "model_score": 0.7784,
+      "status": "submitted",
+      "style_score": null,
+      "timestamp": "2026-11-09T06:05:49+00:00"
+    },
+    {
+      "combined_score": null,
+      "content_id": "2512a2a4-2d2e-41bb-92bd-65ed3a44d532",
+      "creator_id": "ester",
+      "guess": "placeholder",
+      "label": null,
+      "model_score": 0.7784,
+      "status": "submitted",
+      "style_score": null,
+      "timestamp": "2026-11-09T17:25:32+00:00"
+    },
+    {
+      "content_id": "2512a2a4-2d2e-41bb-92bd-65ed3a44d532",
+      "creator_id": "ester",
+      "event": "appeal",
+      "reasoning": "I wrote this myself for a team update.",
+      "status": "under_review",
+      "timestamp": "2026-11-09T17:26:37+00:00"
+    },
+    {
+      "combined_score": 0.5819,
+      "content_id": "2f4c5f9c-83dd-4026-8eb4-c6df65f4b5a0",
+      "creator_id": "ester",
+      "guess": "unsure",
+      "label": "PLACEHOLDER \u2014 write the unsure label.",
+      "model_score": 0.7784,
+      "status": "decided",
+      "style_score": 0.3854,
+      "timestamp": "2026-11-09T17:31:58+00:00"
+    },
+    {
+      "combined_score": 0.5819,
+      "content_id": "611f1cd6-7b39-4d8d-a9ae-4067dc54e017",
+      "creator_id": "ester",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.7784,
+      "status": "decided",
+      "style_score": 0.3854,
+      "timestamp": "2026-11-09T17:33:48+00:00"
+    },
+    {
+      "content_id": "611f1cd6-7b39-4d8d-a9ae-4067dc54e017",
+      "creator_id": "ester",
+      "event": "appeal",
+      "reasoning": "I wrote this myself for a team update.",
+      "status": "under_review",
+      "timestamp": "2026-11-09T17:34:39+00:00"
+    },
+    {
+      "combined_score": 0.715,
+      "content_id": "7b6da679-68f2-43fc-a0e8-aa29f6f09ce5",
+      "creator_id": "ester",
+      "guess": "ai",
+      "label": "This has several features that are common in machine-generated writing. That's an automated estimate, not proof, and it can be wrong, especially for plain or very clear writing. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.8864,
+      "status": "decided",
+      "style_score": 0.5437,
+      "timestamp": "2026-11-09T17:34:48+00:00"
+    },
+    {
+      "combined_score": 0.3383,
+      "content_id": "963d6235-e881-49cc-b076-496a563749a9",
+      "creator_id": "ester",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.5448,
+      "status": "decided",
+      "style_score": 0.1319,
+      "timestamp": "2026-11-09T17:34:56+00:00"
+    },
+    {
+      "combined_score": 0.1815,
+      "content_id": "f34d38cd-ba11-43a8-9d21-d6b3f4f9e335",
+      "creator_id": "flood_tester",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2588,
+      "status": "decided",
+      "style_score": 0.1042,
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "combined_score": 0.1815,
+      "content_id": "7c50c07d-5765-4922-9d1d-ffc64009523b",
+      "creator_id": "flood_tester",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2588,
+      "status": "decided",
+      "style_score": 0.1042,
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "combined_score": 0.1815,
+      "content_id": "92eaecfb-addd-4f74-9b7c-368fee9d1928",
+      "creator_id": "flood_tester",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2588,
+      "status": "decided",
+      "style_score": 0.1042,
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "combined_score": 0.1815,
+      "content_id": "6fc3f572-02dd-4362-bcd8-fd94a551ff22",
+      "creator_id": "flood_tester",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2588,
+      "status": "decided",
+      "style_score": 0.1042,
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "combined_score": 0.1815,
+      "content_id": "607a8469-994c-438c-bc0a-2c02cfa0e9b2",
+      "creator_id": "flood_tester",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2588,
+      "status": "decided",
+      "style_score": 0.1042,
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "creator_id": "flood_tester",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:15+00:00"
+    },
+    {
+      "combined_score": 0.3437,
+      "content_id": "ec271b7d-6c2f-4152-b226-237daf539cb5",
+      "creator_id": "log_check_1",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.5041,
+      "status": "decided",
+      "style_score": 0.1833,
+      "timestamp": "2026-11-09T17:47:21+00:00"
+    },
+    {
+      "combined_score": 0.5863,
+      "content_id": "762c17b8-dd2d-48e8-a3eb-dc6c453e3bbf",
+      "creator_id": "log_check_2",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.7195,
+      "status": "decided",
+      "style_score": 0.4531,
+      "timestamp": "2026-11-09T17:47:21+00:00"
+    },
+    {
+      "combined_score": 0.4084,
+      "content_id": "e35c9b34-c52c-4cba-8397-f4bbbb7545d9",
+      "creator_id": "log_check_3",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.5357,
+      "status": "decided",
+      "style_score": 0.2811,
+      "timestamp": "2026-11-09T17:47:21+00:00"
+    },
+    {
+      "creator_id": "log_check_4",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "NoneType",
+      "timestamp": "2026-11-09T17:47:21+00:00"
+    },
+    {
+      "content_id": "does-not-exist",
+      "creator_id": "unknown",
+      "event": "rejected",
+      "http_status": 404,
+      "reason": "unknown_content_id",
+      "route": "/appeal",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:47:21+00:00"
+    },
+    {
+      "combined_score": 0.3427,
+      "content_id": "1f48d957-3746-40bd-b8e9-53954c6927ee",
+      "creator_id": "attacker_EV01",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.1635,
+      "status": "decided",
+      "style_score": 0.5218,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.3737,
+      "content_id": "936bb5f6-f452-4af3-a9d5-49c03e9b3796",
+      "creator_id": "attacker_EV02",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.5943,
+      "status": "decided",
+      "style_score": 0.153,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.5286,
+      "content_id": "8f042da8-9712-47a4-903b-98fbdda278f9",
+      "creator_id": "attacker_EV03",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.6662,
+      "status": "decided",
+      "style_score": 0.391,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.5693,
+      "content_id": "80b7a9ee-5368-44b3-a751-fdb07dfdca3b",
+      "creator_id": "attacker_EV04",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.6114,
+      "status": "decided",
+      "style_score": 0.5272,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.3246,
+      "content_id": "8aa1dd53-24b9-4e0f-b38f-33632e0f2910",
+      "creator_id": "attacker_EV05",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.3212,
+      "status": "decided",
+      "style_score": 0.3281,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.3831,
+      "content_id": "2c3aec38-2ca9-48d0-ac50-71bac7489b65",
+      "creator_id": "attacker_EV06",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.5727,
+      "status": "decided",
+      "style_score": 0.1935,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.5844,
+      "content_id": "693ce871-3e59-4ce7-989e-970ea9cf8f63",
+      "creator_id": "attacker_EV07",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.5862,
+      "status": "decided",
+      "style_score": 0.5826,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.2842,
+      "content_id": "ec936781-bfd6-4576-94b4-3ede1f9890df",
+      "creator_id": "attacker_EV08",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2452,
+      "status": "decided",
+      "style_score": 0.3232,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.5183,
+      "content_id": "6f408ae0-f8a2-4f24-a5f4-99109d596790",
+      "creator_id": "attacker_EV09",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.7042,
+      "status": "decided",
+      "style_score": 0.3324,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.7665,
+      "content_id": "0c68508e-057f-46a0-82ef-5808578ebaca",
+      "creator_id": "attacker_EV10",
+      "guess": "ai",
+      "label": "This has several features that are common in machine-generated writing. That's an automated estimate, not proof, and it can be wrong, especially for plain or very clear writing. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.9792,
+      "status": "decided",
+      "style_score": 0.5538,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.5225,
+      "content_id": "44a26b06-a144-4cff-9d11-8363c2e7d6b2",
+      "creator_id": "attacker_FP01",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.6175,
+      "status": "decided",
+      "style_score": 0.4274,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.6428,
+      "content_id": "b1481e36-45d2-445c-ab89-3e195311dc24",
+      "creator_id": "attacker_FP02",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.7387,
+      "status": "decided",
+      "style_score": 0.5469,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.6351,
+      "content_id": "cbf75b89-8fce-4552-a8d6-fb507b43f4b1",
+      "creator_id": "attacker_FP03",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.8051,
+      "status": "decided",
+      "style_score": 0.4652,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.6146,
+      "content_id": "88ac7942-7ecd-4c04-b682-6178f20b55c6",
+      "creator_id": "attacker_FP04",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.8329,
+      "status": "decided",
+      "style_score": 0.3963,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.7194,
+      "content_id": "337d36a1-dec6-46cc-8485-e411e1a9794f",
+      "creator_id": "attacker_FP05",
+      "guess": "ai",
+      "label": "This has several features that are common in machine-generated writing. That's an automated estimate, not proof, and it can be wrong, especially for plain or very clear writing. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.8005,
+      "status": "decided",
+      "style_score": 0.6383,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.6198,
+      "content_id": "174b72b4-50ee-48de-bba3-ce7a5bcc5b9f",
+      "creator_id": "attacker_FP06",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.8814,
+      "status": "decided",
+      "style_score": 0.3581,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.635,
+      "content_id": "17429c04-9d2c-4d75-8d64-9e10f117e935",
+      "creator_id": "attacker_FP07",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.8816,
+      "status": "decided",
+      "style_score": 0.3884,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.2758,
+      "content_id": "7438f1cf-4d29-4fea-bb13-e79ff3be6583",
+      "creator_id": "attacker_FP08",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.3223,
+      "status": "decided",
+      "style_score": 0.2294,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.2804,
+      "content_id": "70dc1577-b141-497a-b5d9-67fb96afe0cc",
+      "creator_id": "attacker_PI01",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.4625,
+      "status": "decided",
+      "style_score": 0.0983,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.1782,
+      "content_id": "42eed533-a99b-4d49-b028-d9dad1065783",
+      "creator_id": "attacker_PI02",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2044,
+      "status": "decided",
+      "style_score": 0.1519,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.4917,
+      "content_id": "8a47562d-7003-43f9-8880-de7c29bc84a4",
+      "creator_id": "attacker_PI03",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.5943,
+      "status": "decided",
+      "style_score": 0.389,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.4609,
+      "content_id": "45bf2be1-3061-46fd-93e8-77a216181001",
+      "creator_id": "attacker_PI04",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.4998,
+      "status": "decided",
+      "style_score": 0.4221,
+      "timestamp": "2026-11-09T17:57:46+00:00"
+    },
+    {
+      "combined_score": 0.5228,
+      "content_id": "5cb04de7-c75c-4707-b8d9-e68b5f326aa6",
+      "creator_id": "attacker_PI05",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.6401,
+      "status": "decided",
+      "style_score": 0.4054,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.4843,
+      "content_id": "0a4ed6b5-619b-47de-89f3-9c866a64bab4",
+      "creator_id": "attacker_PI06",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.5583,
+      "status": "decided",
+      "style_score": 0.4102,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_MF01",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "str",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_MF02",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_too_short",
+      "route": "/submit",
+      "status": "rejected",
+      "text_length": 1,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.125,
+      "content_id": "ebefbcf0-30cf-46f4-98bf-62335071ee9c",
+      "creator_id": "attacker_MF03",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.2806,
+      "content_id": "0d41efec-4d3a-4bc6-a867-66cd5c026a17",
+      "creator_id": "attacker_MF04",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0112,
+      "status": "decided",
+      "style_score": 0.55,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.6238,
+      "content_id": "82f25c90-67ca-4454-ba5e-f78213e0ac14",
+      "creator_id": "attacker_MF05",
+      "guess": "unsure",
+      "label": "We can't tell whether this was written by a person or by AI. Some of it looks like machine writing, but plain, clear writing can look that way too, so this is not a finding that AI wrote it. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.9976,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.7734,
+      "content_id": "df75984c-f626-4202-88be-bbb496966bd7",
+      "creator_id": "attacker_MF06",
+      "guess": "ai",
+      "label": "This has several features that are common in machine-generated writing. That's an automated estimate, not proof, and it can be wrong, especially for plain or very clear writing. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.9969,
+      "status": "decided",
+      "style_score": 0.55,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.7282,
+      "content_id": "78979397-0155-4310-a5de-4e8002dd6b73",
+      "creator_id": "attacker_MF07",
+      "guess": "ai",
+      "label": "This has several features that are common in machine-generated writing. That's an automated estimate, not proof, and it can be wrong, especially for plain or very clear writing. If you wrote it yourself, you can appeal and your appeal will be recorded and flagged for review.",
+      "model_score": 0.9064,
+      "status": "decided",
+      "style_score": 0.55,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_MF08",
+      "event": "rejected",
+      "http_status": 413,
+      "reason": "text_too_long",
+      "route": "/submit",
+      "status": "rejected",
+      "text_length": 57640,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_RQ01",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "NoneType",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.2447,
+      "content_id": "854c34e5-d9b4-464a-8aca-f948b0caeda3",
+      "creator_id": "unknown",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.2395,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_RQ03",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "int",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_RQ04",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "list",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_RQ05",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "NoneType",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.1496,
+      "content_id": "61eec67e-0c1a-41b8-8920-9d9ac9d388a2",
+      "creator_id": "unknown",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0492,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "bad_request",
+      "route": "/submit",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "bad_request",
+      "route": "/submit",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "bad_request",
+      "route": "/submit",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_RQ12",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "text_missing",
+      "route": "/submit",
+      "status": "rejected",
+      "text_type": "dict",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.1394,
+      "content_id": "7f13b22d-423f-4bfa-89e0-2573dfa1f34a",
+      "creator_id": "attacker_flood",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0287,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.1394,
+      "content_id": "95bca439-d39e-4122-bec4-ac7c55f7d89f",
+      "creator_id": "attacker_flood",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0287,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.1394,
+      "content_id": "b9cd8695-1cb7-40ba-be2f-a1b71a4b3177",
+      "creator_id": "attacker_flood",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0287,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.1394,
+      "content_id": "acb228d6-1568-4b1f-b99d-e7e614c6f547",
+      "creator_id": "attacker_flood",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0287,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "combined_score": 0.1394,
+      "content_id": "2e8fc024-f976-4fdc-8bdd-9cb5e0fd5265",
+      "creator_id": "attacker_flood",
+      "guess": "human",
+      "label": "We think this was probably written by a person. Nothing in it stood out as typical of machine-generated writing. This is an automated best guess, so it can be wrong.",
+      "model_score": 0.0287,
+      "status": "decided",
+      "style_score": 0.25,
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "attacker_flood",
+      "event": "rejected",
+      "limit": "5 per 1 minute",
+      "reason": "rate_limited",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:57:47+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "bad_request",
+      "route": "/submit",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:58:52+00:00"
+    },
+    {
+      "creator_id": "unknown",
+      "event": "rejected",
+      "http_status": 400,
+      "reason": "bad_request",
+      "route": "/submit",
+      "status": "rejected",
+      "timestamp": "2026-11-09T17:58:52+00:00"
+    }
+  ]
+}

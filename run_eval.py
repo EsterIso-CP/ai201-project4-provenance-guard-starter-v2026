@@ -25,6 +25,8 @@ import argparse
 import datetime as dt
 import json
 import sys
+import time
+import uuid
 from pathlib import Path
 
 import config
@@ -64,6 +66,65 @@ def describe(body):
         text = body["text"]
         return text[:70] if text else "(empty text)"
     return json.dumps(body)[:120]
+
+
+def run_appeal_trial(requests, url, scenario, timeout):
+    """
+    One trial of an "appeals" scenario (criterion 4).
+
+    For each text: submit it, appeal the content_id that came back, then read
+    GET /log and check the appeal is there with that content_id, the reasoning,
+    and status under_review. Last, appeal a content_id that was never issued:
+    that should be a 404 and leave no appeal entry behind.
+    """
+    results = []
+    for i, text in enumerate(scenario["appeals"], 1):
+        creator = f"eval_{scenario['name'][:12]}_{i}"
+        reasoning = f"I wrote this myself (eval appeal {i})."
+        row = {"sent": describe({"text": text, "creator_id": creator})}
+        try:
+            sub = requests.post(f"{url}/submit", json={"text": text, "creator_id": creator},
+                                timeout=timeout)
+            content_id = sub.json().get("content_id")
+            row["submit_status"] = sub.status_code
+            row["content_id"] = content_id
+            app = requests.post(f"{url}/appeal",
+                                json={"content_id": content_id, "reasoning": reasoning},
+                                timeout=timeout)
+            row["status"] = app.status_code
+            row["appeal_response"] = app.json()
+            entries = requests.get(f"{url}/log", timeout=timeout).json()["entries"]
+            mine = [e for e in entries if e.get("content_id") == content_id]
+            appeal_entries = [e for e in mine if e.get("event") == "appeal"
+                              and e.get("reasoning") == reasoning]
+            row["log_entries_for_id"] = len(mine)
+            row["appeal_logged"] = bool(appeal_entries)
+            row["logged_status"] = appeal_entries[-1].get("status") if appeal_entries else None
+            row["passed"] = (app.status_code == 200
+                             and row["appeal_response"].get("status") == "under_review"
+                             and row["logged_status"] == "under_review")
+        except Exception as exc:  # noqa: BLE001
+            row.update({"status": None, "error": f"{type(exc).__name__}: {exc}",
+                        "passed": False})
+        results.append(row)
+
+    fake = str(uuid.uuid4())
+    row = {"sent": f"appeal on unknown content_id {fake}"}
+    try:
+        app = requests.post(f"{url}/appeal",
+                            json={"content_id": fake, "reasoning": "This was mine."},
+                            timeout=timeout)
+        entries = requests.get(f"{url}/log", timeout=timeout).json()["entries"]
+        stray = [e for e in entries
+                 if e.get("content_id") == fake and e.get("event") == "appeal"]
+        row.update({"status": app.status_code, "appeal_response": app.json(),
+                    "appeal_entries_created": len(stray),
+                    "passed": app.status_code == 404 and not stray})
+    except Exception as exc:  # noqa: BLE001
+        row.update({"status": None, "error": f"{type(exc).__name__}: {exc}",
+                    "passed": False})
+    results.append(row)
+    return results
 
 
 def main():
@@ -112,12 +173,20 @@ def main():
 
         trials = []
         for trial in range(1, args.trials + 1):
+            if scenario.get("appeals"):
+                results = run_appeal_trial(requests, args.url, scenario, args.timeout)
+                trials.append(results)
+                passed = sum(1 for r in results if r.get("passed"))
+                print(f"  trial {trial}: {passed}/{len(results)} appeal checks passed")
+                continue
             results = []
             for i, body in enumerate(bodies_for(scenario), 1):
                 preview = describe(body)
+                started = time.monotonic()
                 try:
                     response = requests.post(f"{args.url}/submit", json=body,
                                              timeout=args.timeout)
+                    elapsed = round(time.monotonic() - started, 2)
                     payload = response.json() if response.content else {}
                     results.append({
                         "status": response.status_code,
@@ -126,6 +195,8 @@ def main():
                         "model_score": payload.get("model_score"),
                         "style_score": payload.get("style_score"),
                         "label": payload.get("label"),
+                        "error": payload.get("error"),
+                        "elapsed_s": elapsed,
                         "sent": preview,
                     })
                 except Exception as exc:  # noqa: BLE001
